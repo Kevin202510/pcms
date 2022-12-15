@@ -9,7 +9,7 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+                    <a href="index.php" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -21,6 +21,8 @@
                          <li><a href="veterenarian.php" class="smoothScroll">Doctors</a></li>
                          <li><a href="news.php" class="smoothScroll">News</a></li>
                          <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li class="appointment-btn"><a href="login.php">Sign in</a></li>
+                         <li class="appointment-btn"><a href="signup.php">Sign up</a></li>
                          <li class="appointment-btn"><a href="appointment.php">Make an appointment</a></li>
                          <li class="appointment-btn"><a href="<?php echo $urlappointment; ?>">Start a meeting</a></li>
                     </ul>

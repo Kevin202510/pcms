@@ -6,7 +6,7 @@
         <h4 class="modal-title" id="myModalLabel">Add New User</h4>
       </div>
       <div class="modal-body">
-        <form method="POST" action="usersModal/usersModalFunctions.php">
+        <form id="userForm">
             <input type="hidden" name="id" id="id">
             <div class="form-group">
             <label for="exampleInputEmail1">Permission</label>

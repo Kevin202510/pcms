@@ -47,7 +47,8 @@
                                              <th><?php echo $data["address"]; ?></th>
                                              <th><?php echo $data["contact"]; ?></th>
                                              <th><?php echo $data["email"]; ?></th>
-                                             <th><button style="margin-right:5px;" type="button" class="btn btn-primary">Edit</button><button type="button" class="btn btn-danger">Delete</button></th>
+                                             <th><button style="margin-right:5px;" type="button" class="btn btn-primary">Edit</button>
+                                             <button type="button" class="btn btn-danger">Delete</button></th>
                                         </tr>
                                         <?php 
                                              $index++;}
@@ -66,3 +67,5 @@
      <?php include('../adminLayouts/footer.php') ?>
 
      <script src="usersModal/usersFunctions.js"></script>
+
+     

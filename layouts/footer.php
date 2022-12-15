@@ -5,11 +5,11 @@
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
-                              <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
+                              <p>General Tinio Central Luzon Nueva Ecija.</p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                                   <p><i class="fa fa-phone"></i> 0927-770-9915</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">gmybertbusalpa@gmail.com</a></p>
                               </div>
                          </div>
                     </div>
