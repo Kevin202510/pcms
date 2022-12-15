@@ -8,6 +8,46 @@
      <!-- MENU -->
      <?php include('layouts/menu.php') ?>
 
+
+<?php
+
+          include('Functions/APIFunctions.php');
+          $newAPIFunctions = new APIFunctions();
+
+          if(isset($_POST['register'])){
+          $firstname = $_POST["firstname"];
+          $lastname = $_POST["lastname"];
+          $address = $_POST["address"];
+          $contact = $_POST["contact"];
+          $email = $_POST["email"];
+          $password = $_POST["password"];
+          $permission_id = 4;
+
+          $newAPIFunctions->insert('userstables',['permission_id'=>$permission_id,
+          'firstname'=>$firstname,
+          'lastname'=>$lastname,
+          'address'=>$address,
+          'contact'=>$contact,
+          'email'=>$email,
+          'password'=>$password,]);
+
+          if($newAPIFunctions){
+             echo "<script>alert('sucess');</script>";
+          }else{
+               echo '<script>alert("May Error!");</script>';
+          }
+}
+
+?>
+
+
+
+
+
+
+
+
+
      <!-- MAKE AN APPOINTMENT -->
      <section id="appointment" data-stellar-background-ratio="3">
           <div class="container">
@@ -18,36 +58,51 @@
                     </div>
 
                     <div class="col-md-6 col-sm-6">
-                         <form id="appointment-form" role="form" method="post" action="#">
+                         <form id="appointment-form" role="form" method="POST" >
 
                               <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
                                    <h2>SIGN UP</h2>
                               </div>
-
+                              <input type="hidden"  id="ids" name="id" >
+                              <input type="hidden"  id="permission_ids " name="permission_ids " value="4">   
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
-                                        <label for="name">Full Name</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                                        <label for="name">First Name </label>
+                                        <input type="text" class="form-control" id="firstnames" name="firstname" placeholder="First Name">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Last Name </label>
+                                        <input type="text" class="form-control" id="lastnames" name="lastname" placeholder="Last Name">
+                                   </div>
+
+                                   <div class="col-md-6 col-sm-6">
+                                        <label for="name">Address</label>
+                                        <input type="text" class="form-control" id="addresss" name="address" placeholder="Address">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="email">Password</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="emails" name="email" placeholder="Your Email">
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="telephone">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+63">
+                                        <input type="tel" class="form-control" id="contacts" name="contact" placeholder="+63">
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6">
+                                        <label for="telephone">Password</label>
+                                        <input type="tel" class="form-control" id="passwords" name="password" placeholder="Password">
                                     </div>
 
                                     <div class="col-lg-12 col-lg-12">
+<<<<<<< HEAD
                                         <!-- <button type="submit" class="form-control" id="cf-submit" name="submit">Sign up</button> -->
                                         <button type="button" class="form-control" id="cf-submit" name="submit"><a href="appointment.php">Sign up</a></button>
+=======
+                                        <button type="submit" class="form-control" id="cf-submit" name="register">Sign up</button>
+>>>>>>> 87cd7624cb8852420b9a4ae71aeae37e02acedc3
                                    </div>
 
 
