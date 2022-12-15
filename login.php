@@ -35,8 +35,10 @@
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Login</button>
                                    </div>
+
+                                   <a href="signup.php">Don't have account? Sign up</a>
                               </div>
                         </form>
                     </div>
