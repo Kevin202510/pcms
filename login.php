@@ -35,7 +35,8 @@
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Login</button>
+                                        <!-- <button type="submit" class="form-control" id="cf-submit" name="submit">Login</button> -->
+                                        <button type="button" class="form-control" id="cf-submit" name="submit"><a href="appointment.php">Login</a></button>
                                    </div>
 
                                    <a href="signup.php">Don't have account? Sign up</a>

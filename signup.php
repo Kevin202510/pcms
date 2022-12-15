@@ -46,7 +46,8 @@
                                     </div>
 
                                     <div class="col-lg-12 col-lg-12">
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Sign up</button>
+                                        <!-- <button type="submit" class="form-control" id="cf-submit" name="submit">Sign up</button> -->
+                                        <button type="button" class="form-control" id="cf-submit" name="submit"><a href="appointment.php">Sign up</a></button>
                                    </div>
 
 
