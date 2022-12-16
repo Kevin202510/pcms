@@ -1,3 +1,11 @@
+
+
+
+
+<?php session_start(); ?>
+
+
+
 <!-- header -->
 <?php include('layouts/head.php') ?>
 
@@ -7,6 +15,43 @@
 
      <!-- MENU -->
      <?php include('layouts/menu.php') ?>
+
+
+
+     <!-- LOGIN -->
+<?php 
+          include('Functions/APIFunctions.php');
+          $newAPIFunctions = new APIFunctions();
+
+          if(isset($_POST["login"])){
+
+          $email=$_POST["email"];
+          $password=$_POST["password"];
+
+          $login = "email='$email' AND password='$password'";
+          $newAPIFunctions->select("userstables","*",$login);
+          $userLists = $newAPIFunctions->sql;
+          $user_id;
+          while ($data = mysqli_fetch_assoc($userLists)){
+               if($data['permission_id']==1 || $data['permission_id']==2 || $data['permission_id']==3){
+                    $_SESSION['PERMISSION_ID'] = $data['permission_id'];
+                    $_SESSION['FULLNAME'] = $data['firstname']." ".$data['lastname'];
+                    
+                    echo "<script>location.href = 'http://localhost/pcms/index.php';</script>";
+               }else{
+                    $_SESSION['PERMISSION_ID'] = $data['permission_id'];
+                    $_SESSION['FULLNAME'] = $data['firstname']." ".$data['lastname'];
+                    $_SESSION['ID'] = $data['id'];
+                    echo "<script>location.href = 'http://localhost/pcms/index.php';</script>";
+               }
+          }
+          }
+?>
+
+<!-- SELECT * FROM `appointments` RIGHT JOIN `userstables`ON `userstables`.`id`=`appointments`.`app_user_id` -->
+<!-- LOGIN -->
+
+
 
      <section id="appointment" data-stellar-background-ratio="3">
           <div class="container">
@@ -35,7 +80,7 @@
                                    </div>
 
                                    <div class="col-md-12 col-sm-12">
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Login</button>
+                                        <button type="submit" class="form-control" id="cf-submit" name="login">Login</button>
                                    </div>
 
                                    <a href="signup.php">Don't have account? Sign up</a>

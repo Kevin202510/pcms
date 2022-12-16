@@ -9,8 +9,12 @@
      <?php include('layouts/menu.php') ?>
 
 
-<?php
 
+
+
+<!-- LOGIN FUNCTION -->
+
+<?php
           include('Functions/APIFunctions.php');
           $newAPIFunctions = new APIFunctions();
 
@@ -39,12 +43,7 @@
 }
 
 ?>
-
-
-
-
-
-
+<!-- LOGIN FUNCTION -->
 
 
 

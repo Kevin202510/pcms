@@ -1,4 +1,4 @@
-<!-- header -->
+<?php session_start(); ?><!-- header -->
 <?php include('layouts/head.php') ?>
 
      <!-- HEADER -->

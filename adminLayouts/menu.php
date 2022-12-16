@@ -13,13 +13,16 @@
                </div>
 
                <!-- MENU LINKS -->
+              
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
+                         <li><a href="../index.php" class="smoothScroll">Customer Side</a></li>
                          <li><a href="usersList.php" class="smoothScroll">Users</a></li>
                          <li><a href="appointmentList.php" class="smoothScroll">Appointments</a></li>
                          <li><a href="veterenarianList.php" class="smoothScroll">Doctors</a></li>
                     </ul>
                </div>
+           
 
           </div>
      </section>
