@@ -41,14 +41,19 @@
                                              $index = 1;
                                              while ($data = mysqli_fetch_assoc($userLists)){
                                         ?>
+
                                         <tr>
                                              <th><?php echo $index; ?></th>
                                              <th><?php echo $data["firstname"] ." ". $data["lastname"]; ?></th>
                                              <th><?php echo $data["address"]; ?></th>
                                              <th><?php echo $data["contact"]; ?></th>
                                              <th><?php echo $data["email"]; ?></th>
-                                             <th><button style="margin-right:5px;" type="button" class="btn btn-primary">Edit</button>
-                                             <button type="button" class="btn btn-danger">Delete</button></th>
+
+                                             <th>
+                                             <div class="btn-group">
+                                             <button style="margin-right:5px;" type="button" class="btn btn-primary"><i class="fa fa-pencil"></i></button>
+                                             <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>  </div></th>
+                                            
                                         </tr>
                                         <?php 
                                              $index++;}
