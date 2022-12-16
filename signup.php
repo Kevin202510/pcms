@@ -96,7 +96,12 @@
                                     </div>
 
                                     <div class="col-lg-12 col-lg-12">
+<<<<<<< HEAD
+                                        <!-- <button type="submit" class="form-control" id="cf-submit" name="submit">Sign up</button> -->
+                                        <button type="button" class="form-control" id="cf-submit" name="submit"><a href="appointment.php">Sign up</a></button>
+=======
                                         <button type="submit" class="form-control" id="cf-submit" name="register">Sign up</button>
+>>>>>>> 87cd7624cb8852420b9a4ae71aeae37e02acedc3
                                    </div>
 
 
